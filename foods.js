@@ -244,7 +244,7 @@ window.TAGS = {
 
 window.UI = {
  en:{
-  listNote:"This list is my personal recommendation, not a ranking or an official guide. Use it as a reference.", coffee:"If this site helped you, you're welcome to buy me a small coffee.", coffeeBtn:"Buy me a coffee", copy:"Copy", copied:"Copied", langName:"EN", heroLine:"Foods to eat in Taiwan", listen:"Hear it in Chinese", disclaimer:"All food illustrations on this site were made with AI image tools.",
+  listNote:"This list is my personal recommendation, not a ranking or an official guide. Use it as a reference.", coffee:"Found this helpful? Feel free to buy me a coffee.", coffeeBtn:"Buy me a coffee", copy:"Copy", copied:"Copied", langName:"EN", heroLine:"Foods to eat in Taiwan", listen:"Hear it in Chinese", disclaimer:"All food illustrations on this site were made with AI image tools.",
   heroSub:"A local friend's list for first-time visitors. Start with the easy ten, then go as brave as you like.",
   stamp:"36 foods", jump:"See all 36",
   topTitle:"Start here", topSub:"Ten easy, iconic picks for your first days in Taiwan.",
