@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="36 Taiwanese foods a local friend recommends for first-time visitors, in English, 繁體中文, 한국어 and 日本語.">
+<meta property="og:title" content="Eat Taiwan 吃台灣">
+<meta property="og:description" content="36 Taiwanese foods a local friend recommends for first-time visitors.">
+<meta name="theme-color" content="#F8EEDB">
+<link rel="icon" href="img/17.webp" type="image/webp">
+<title>Eat Taiwan 吃台灣</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&family=Zilla+Slab:wght@600;700&display=swap">
+<style>
+/* Layout: an old-time grocery (柑仔店) shelf — paper ground, 茄芷袋 stripe bands, sticker cards like price-tagged goods */
+:root{
+  --paper:#F8EEDB; --paper-2:#F0E0C0; --card:#FFFAF0; --ink:#2B1D14; --ink-2:#6B5443; --line:rgba(43,29,20,.16);
+  --red:#C21F30; --blue:#1F4E99; --green:#2E7D4F; --amber:#D98A1E; --on-red:#FFF6E6; --shadow:#2B1D14;
+  --display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --slab:"Zilla Slab","Rockwell","Georgia",serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1C1612; --paper-2:#251D17; --card:#2A211A; --ink:#F3E6CC; --ink-2:#C4AE90; --line:rgba(243,230,204,.16);
+  --red:#EE5F68; --blue:#86A9EA; --green:#6CC08F; --amber:#F0B257; --on-red:#2A0A0E; --shadow:#0B0806; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1C1612; --paper-2:#251D17; --card:#2A211A; --ink:#F3E6CC; --ink-2:#C4AE90; --line:rgba(243,230,204,.16);
+  --red:#EE5F68; --blue:#86A9EA; --green:#6CC08F; --amber:#F0B257; --on-red:#2A0A0E; --shadow:#0B0806; color-scheme:dark}
+:root[lang="ko"]{--body:"Noto Sans KR","Apple SD Gothic Neo","Noto Sans TC",system-ui,sans-serif}
+:root[lang="ja"]{--body:"Noto Sans JP","Hiragino Sans","Noto Sans TC",system-ui,sans-serif}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.stripe{height:12px;background:repeating-linear-gradient(90deg,var(--red) 0 24px,var(--paper) 24px 30px,var(--blue) 30px 54px,var(--paper) 54px 60px,var(--green) 60px 84px,var(--paper) 84px 90px)}
+
+/* header */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:2px solid var(--ink)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.seal{display:grid;place-items:center;width:38px;height:38px;background:var(--red);color:var(--on-red);font-family:var(--display);font-weight:900;font-size:22px;border-radius:8px;transform:rotate(-4deg)}
+.brand b{font-family:var(--slab);font-size:20px;letter-spacing:.01em}
+.langs{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--card)}
+.langs button{border:0;background:transparent;padding:5px 12px;font-size:14px;cursor:pointer;min-height:34px}
+.langs button+button{border-left:1.5px solid var(--line)}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center;padding-block:40px 48px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.zh-title{font-family:var(--display);font-weight:900;font-size:clamp(76px,15vw,148px);line-height:1;color:var(--red);letter-spacing:.04em;text-shadow:5px 5px 0 var(--amber);margin:10px 0 18px}
+.hero-line{font-family:var(--slab);font-weight:700;font-size:clamp(26px,3.6vw,38px);line-height:1.15}
+:root[lang="zh"] .hero-line,:root[lang="ko"] .hero-line,:root[lang="ja"] .hero-line{font-family:var(--body);font-weight:700}
+.hero-sub{margin-top:12px;max-width:34em;color:var(--ink-2);font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:10px 18px;border:2px solid var(--ink);border-radius:999px;background:var(--red);color:var(--on-red);font-weight:700;text-decoration:none;box-shadow:3px 3px 0 var(--shadow);cursor:pointer}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--shadow)}
+.btn.ghost{background:var(--card);color:var(--ink)}
+.collage{position:relative;width:100%;max-width:460px;aspect-ratio:1/1;justify-self:center}
+.collage img{position:absolute;width:44%;height:auto;filter:drop-shadow(3px 4px 0 rgba(43,29,20,.18))}
+.collage img:nth-child(1){left:2%;top:4%;transform:rotate(-8deg)}
+.collage img:nth-child(2){left:52%;top:0;transform:rotate(7deg);width:36%}
+.collage img:nth-child(3){left:28%;top:30%;transform:rotate(-2deg);width:48%}
+.collage img:nth-child(4){left:0;top:56%;transform:rotate(6deg);width:40%}
+.collage img:nth-child(5){left:56%;top:54%;transform:rotate(-7deg);width:42%}
+.stamp{position:absolute;right:4%;top:36%;width:96px;height:96px;border-radius:50%;background:var(--blue);color:var(--paper);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:900;font-size:22px;line-height:1.1;transform:rotate(-12deg);border:3px double var(--paper);box-shadow:0 0 0 3px var(--blue);padding:8px}
+
+/* sections */
+section{scroll-margin-top:72px}
+.sec{padding-block:44px}
+.band{background:var(--paper-2);border-block:2px solid var(--ink)}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head h2{font-family:var(--slab);font-size:clamp(28px,4vw,40px);line-height:1.1}
+:root:not([lang="en"]) .sec-head h2{font-family:var(--body);font-weight:700}
+.sec-head p{color:var(--ink-2);max-width:40em;margin-top:6px}
+.count{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+@media (min-width:760px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}#topGrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (min-width:1000px){#grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.hero{overflow-x:clip}
+.card{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:stretch;text-align:left;background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:10px 12px 12px;box-shadow:4px 4px 0 var(--shadow);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--shadow)}
+.card-open{position:absolute;inset:0;border:0;background:transparent;border-radius:var(--r);cursor:pointer;z-index:1}
+.say{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:0;background:var(--ink);color:var(--paper);cursor:pointer;flex:none}
+.say svg{width:16px;height:16px}
+.say.on{background:var(--red);color:var(--on-red)}
+.card .say{position:absolute;top:10px;right:10px;z-index:2}
+.d-zhrow{display:flex;align-items:center;gap:12px}
+.disclaimer{max-width:46em}
+.card-img{display:block;aspect-ratio:1/1;max-width:100%;margin:-2px 0 6px}
+.card-img img{width:100%;height:100%;object-fit:contain;transition:transform .2s}
+.card:hover .card-img img{transform:rotate(-3deg) scale(1.04)}
+.card-zh{font-family:var(--display);font-weight:900;font-size:24px;line-height:1.2;color:var(--red)}
+.card-name{font-size:14px;color:var(--ink-2);line-height:1.35;min-height:2.7em}
+.card-meta{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:10px;flex-wrap:wrap}
+.price{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;padding:2px 9px;border-radius:10px;background:var(--ink);color:var(--paper);line-height:1.4;max-width:100%}
+.dots{display:inline-flex;gap:3px;align-items:center}
+.dots i{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink-2)}
+.dots i.on{background:var(--ink-2)}
+.dots.lv3 i.on{background:var(--red);border-color:var(--red)}
+.tag{display:inline-block;font-size:12px;font-weight:500;padding:2px 9px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--card));border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);white-space:nowrap}
+.cat-night{--c:var(--red)}.cat-breakfast{--c:var(--amber)}.cat-meal{--c:var(--blue)}.cat-sweet{--c:var(--green)}.cat-hotpot{--c:var(--ink-2)}
+
+/* filters */
+.filters{display:grid;gap:12px;margin-bottom:26px}
+.frow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.flabel{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:500;min-width:96px}
+.chip{border:2px solid var(--ink);background:var(--card);border-radius:999px;padding:5px 14px;font-size:14px;cursor:pointer;min-height:36px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chip small{opacity:.7;margin-left:4px;font-variant-numeric:tabular-nums}
+.empty{padding:28px;border:2px dashed var(--line);border-radius:var(--r);text-align:center;color:var(--ink-2)}
+
+/* phrases */
+.phr{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:520px){.phr{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:860px){.phr{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ph{position:relative;background:var(--card);border:2px dashed var(--ink-2);border-radius:var(--r);padding:14px 16px}
+.ph .say{position:absolute;top:12px;right:12px}
+.ph .z{padding-right:44px;font-family:var(--display);font-weight:900;font-size:28px;line-height:1.2}
+.ph .p{color:var(--blue);font-size:14px;margin-top:2px}
+.ph .m{margin-top:6px;font-size:15px}
+
+footer .wrap{padding-block:40px 56px;display:grid;gap:28px}
+.letter{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);box-shadow:4px 4px 0 var(--shadow);padding:22px 24px;display:grid;gap:10px;max-width:720px}
+.letter .to{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.35;color:var(--red)}
+.contact{display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap;margin-top:6px}
+.contact .btn{margin-top:0}
+.fine .mail{color:var(--ink);overflow-wrap:anywhere}
+.fine{display:grid;gap:6px;color:var(--ink-2);font-size:14px;max-width:46em}
+.fine b{color:var(--ink);font-family:var(--slab)}
+
+/* dialog */
+dialog{width:min(860px,calc(100% - 24px));max-height:calc(100% - 24px);padding:0;border:2px solid var(--ink);border-radius:18px;background:var(--card);color:var(--ink);box-shadow:8px 8px 0 var(--shadow);overflow:auto}
+dialog::backdrop{background:rgba(28,22,18,.55)}
+.d-top{position:sticky;top:0;display:flex;justify-content:flex-end;padding:10px 10px 0;z-index:2;pointer-events:none}
+.x{pointer-events:auto;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--card);font-size:22px;line-height:1;cursor:pointer}
+.d-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;padding:0 28px 28px;margin-top:-30px}
+.d-img{background:var(--paper-2);border-radius:var(--r);border:2px solid var(--ink);display:grid;place-items:center;padding:16px;align-self:start;margin-top:30px}
+.d-img img{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:contain}
+.d-body{display:grid;gap:14px;padding-top:30px;min-width:0}
+.d-tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.d-zh{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,56px);line-height:1.1;color:var(--red)}
+.d-name{font-size:18px;font-weight:700;margin-top:4px}
+.d-py{color:var(--blue);font-size:15px}
+.d-hook{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.45}
+.d-sec h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-bottom:4px}
+.tchips{display:flex;gap:6px;flex-wrap:wrap}
+.tchip{font-size:13px;padding:2px 10px;border-radius:999px;border:1.5px solid var(--ink);background:var(--paper)}
+.note{background:var(--paper);border:2px dashed var(--amber);border-radius:12px;padding:12px 14px}
+.facts{display:flex;gap:20px;flex-wrap:wrap}
+.facts div{display:grid;gap:2px}
+.facts b{font-variant-numeric:tabular-nums;font-size:17px}
+.vendor{padding:24px 28px 32px;display:grid;gap:18px;text-align:center;justify-items:center}
+.vendor .eyebrow{margin-top:8px}
+.order{font-family:var(--display);font-weight:900;font-size:clamp(34px,8.5vw,84px);line-height:1.2;color:var(--ink);background:var(--paper);border:3px solid var(--red);border-radius:16px;padding:18px 22px;width:100%}
+.order-py{font-size:20px;color:var(--blue)}
+.order-mean{color:var(--ink-2)}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:28px 36px;gap:18px}
+  .collage{max-width:340px;order:-1}
+  .stamp{width:78px;height:78px;font-size:18px}
+  .d-grid{grid-template-columns:1fr;padding:0 18px 22px;gap:0}
+  .d-img img{max-width:220px}
+  .d-body{padding-top:16px}
+  .flabel{min-width:0;width:100%}
+  .vendor{padding:20px 18px 26px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.card:hover,.btn:hover{transform:none}.card:hover .card-img img{transform:none}}
+</style>
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Eat Taiwan"><span class="seal" aria-hidden="true">吃</span><b>Eat Taiwan</b></a>
+    <div class="langs" role="group" aria-label="Language" id="langs"></div>
+  </div>
+</header>
+<div class="stripe" aria-hidden="true"></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">台灣好味道 · Taiwan food guide</p>
+        <h1 class="zh-title">吃台灣</h1>
+        <p class="hero-line" data-t="heroLine"></p>
+        <p class="hero-sub" data-t="heroSub"></p>
+        <a class="btn" href="#all" data-t="jump"></a>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <img src="img/17.webp" alt="">
+        <img src="img/02.webp" alt="">
+        <img src="img/01.webp" alt="">
+        <img src="img/08.webp" alt="">
+        <img src="img/19.webp" alt="">
+        <div class="stamp" data-t="stamp"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sec" id="start">
+    <div class="wrap">
+      <div class="sec-head"><div><h2 data-t="topTitle"></h2><p data-t="topSub"></p></div></div>
+      <div class="grid" id="topGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="all">
+    <div class="wrap">
+      <div class="sec-head"><h2 data-t="allTitle"></h2><span class="count" id="count" aria-live="polite"></span></div>
+      <div class="filters">
+        <div class="frow" id="catRow"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden data-t="empty"></p>
+    </div>
+  </section>
+  <div class="stripe" aria-hidden="true"></div>
+
+  <section class="band sec" id="phrases" style="border-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><h2 data-t="phraseTitle"></h2><p data-t="phraseSub"></p></div></div>
+      <div class="phr" id="phr"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="letter">
+      <p class="to" data-t="footer"></p>
+      <p data-t="coffee"></p>
+      <div class="contact">
+        <a class="btn" href="https://buymeacoffee.com/weic" target="_blank" rel="noopener" data-t="coffeeBtn"></a>
+      </div>
+    </div>
+    <div class="fine">
+      <b>Eat Taiwan 吃台灣</b>
+      <p data-t="disclaimer"></p>
+      <p data-t="priceNote"></p>
+      <p data-t="listNote"></p>
+      <p class="mail">weiwork0503@gmail.com</p>
+      <p id="draft" data-t="draftNote"></p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dZh">
+  <div class="d-top"><button class="x" id="x" type="button">×</button></div>
+  <div id="vDetail">
+    <div class="d-grid">
+      <div class="d-img"><img id="dImg" alt=""></div>
+      <div class="d-body">
+        <div class="d-tags" id="dTags"></div>
+        <div><div class="d-zhrow"><h2 class="d-zh" id="dZh"></h2><button class="say" type="button" id="dSay"></button></div><p class="d-name" id="dName"></p><p class="d-py" id="dPy"></p></div>
+        <p class="d-hook" id="dHook"></p>
+        <div class="d-sec"><h3 data-t="what"></h3><p id="dWhat"></p></div>
+        <div class="d-sec"><h3 data-t="tastes"></h3><div class="tchips" id="dTaste"></div></div>
+        <div class="d-sec note"><h3 data-t="tip"></h3><p id="dTip"></p></div>
+        <div class="facts">
+          <div><span class="eyebrow" data-t="price"></span><b id="dPrice"></b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="foods.js"></script>
+<script>
+(function(){
+  const LANGS=["en","zh","ko","ja"];
+  const $=s=>document.querySelector(s);
+  const byId=Object.fromEntries(FOODS.map(f=>[f.id,f]));
+  let lang="en", cat="all", current=null;
+
+  try{const s=localStorage.getItem("eat-tw-lang"); if(LANGS.includes(s)) lang=s; else throw 0;}
+  catch(e){const n=(navigator.language||"en").toLowerCase(); lang=n.startsWith("zh")?"zh":n.startsWith("ko")?"ko":n.startsWith("ja")?"ja":"en";}
+
+  const fontsLoaded={};
+  function loadFont(l){
+    const fam={ko:"Noto+Sans+KR",ja:"Noto+Sans+JP"}[l]; if(!fam||fontsLoaded[l]) return;
+    const k=document.createElement("link"); k.rel="stylesheet";
+    k.href=`https://fonts.googleapis.com/css2?family=${fam}:wght@400;500;700&display=swap`;
+    document.head.appendChild(k); fontsLoaded[l]=1;
+  }
+  const U=()=>UI[lang];
+  const localName=f=>lang==="zh"?f.n.en:f.n[lang];
+  const priceText=f=>`${f.price} ${U().units[f.unit]}`;
+  const priceShort=f=>`${f.price} ${U().unitsShort[f.unit]}`.replace(" ／","／");
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  const synth=window.speechSynthesis;
+  const canSpeak=!!(synth&&window.SpeechSynthesisUtterance);
+  const ICON='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+  function pickVoice(){const vs=synth.getVoices()||[];return vs.find(v=>/zh[-_]TW/i.test(v.lang))||vs.find(v=>/^zh/i.test(v.lang))||null;}
+  function speak(text,btn){
+    if(!canSpeak) return;
+    try{
+      synth.cancel();
+      const u=new SpeechSynthesisUtterance(text); u.lang="zh-TW"; u.rate=0.8;
+      const v=pickVoice(); if(v) u.voice=v;
+      document.querySelectorAll(".say.on").forEach(b=>b.classList.remove("on"));
+      btn.classList.add("on"); u.onend=u.onerror=()=>btn.classList.remove("on");
+      synth.speak(u);
+    }catch(e){btn.classList.remove("on");}
+  }
+  const sayBtn=f=>canSpeak?`<button class="say" type="button" data-say="${f.id}" aria-label="${esc(U().listen+": "+f.zh)}">${ICON}</button>`:"";
+  const sayPhrase=(p,i)=>canSpeak?`<button class="say" type="button" data-sayp="${i}" aria-label="${esc(U().listen+": "+p.zh)}">${ICON}</button>`:"";
+
+  function card(f){
+    const nm=localName(f);
+    return `<article class="card" data-id="${f.id}">
+      <button class="card-open" type="button" data-open="${f.id}" aria-label="${esc(f.zh+" "+nm+", "+priceText(f))}"></button>
+      ${sayBtn(f)}
+      <span class="card-img"><img src="img/${f.id}.webp" alt="" loading="lazy" width="440" height="440"></span>
+      <span class="card-zh">${f.zh}</span>
+      <span class="card-name">${esc(nm)}</span>
+      <span class="card-meta"><span class="tag cat-${f.cat}">${U().cats[f.cat]}</span></span>
+      <span class="card-meta"><span class="price">${esc(priceShort(f))}</span></span>
+    </article>`;
+  }
+
+  function renderStatic(){
+    document.documentElement.setAttribute("lang",lang==="zh"?"zh":lang);
+    loadFont(lang);
+    document.querySelectorAll("[data-t]").forEach(el=>{const v=U()[el.dataset.t]; if(typeof v==="string") el.textContent=v;});
+    $("#draft").hidden=!U().draftNote;
+    $("#x").setAttribute("aria-label",U().close);
+    $("#langs").innerHTML=LANGS.map(l=>`<button type="button" data-l="${l}" aria-pressed="${l===lang}">${UI[l].langName}</button>`).join("");
+    $("#topGrid").innerHTML=FOODS.filter(f=>f.top).map(card).join("");
+    $("#phr").innerHTML=PHRASES.map((p,i)=>`<div class="ph">${sayPhrase(p,i)}<div class="z">${p.zh}</div><div class="p">${p.py}</div>${lang==="zh"?"":`<div class="m">${esc(U().phrases[i])}</div>`}</div>`).join("");
+    renderFilters(); renderGrid();
+  }
+  function renderFilters(){
+    const cats=["all","night","breakfast","meal","sweet","hotpot"];
+    const cnt=c=>c==="all"?FOODS.length:FOODS.filter(f=>f.cat===c).length;
+    $("#catRow").innerHTML=`<span class="flabel">${U().type}</span>`+cats.map(c=>`<button class="chip" type="button" data-cat="${c}" aria-pressed="${c===cat}">${c==="all"?U().all:U().cats[c]}<small>${cnt(c)}</small></button>`).join("");
+  }
+  function renderGrid(){
+    const list=FOODS.filter(f=>cat==="all"||f.cat===cat);
+    $("#grid").innerHTML=list.map(card).join("");
+    $("#count").textContent=U().count(list.length);
+    $("#empty").hidden=list.length>0;
+  }
+
+  function open(id){
+    const f=byId[id]; if(!f) return; current=f;
+    const t=f.t[lang];
+    $("#dImg").src=`img/${f.id}.webp`; $("#dImg").alt=localName(f);
+    $("#dTags").innerHTML=`<span class="tag cat-${f.cat}">${U().cats[f.cat]}</span>`;
+    $("#dZh").textContent=f.zh;
+    const ds=$("#dSay"); ds.hidden=!canSpeak; ds.dataset.say=f.id; ds.innerHTML=ICON; ds.setAttribute("aria-label",U().listen+": "+f.zh); ds.classList.remove("on");
+    $("#dName").textContent=localName(f);
+    $("#dPy").textContent=f.py;
+    $("#dHook").textContent=t[0]; $("#dWhat").textContent=t[1]; $("#dTip").textContent=t[2];
+    $("#dTaste").innerHTML=f.tags.map(k=>`<span class="tchip">${TAGS[k][lang]}</span>`).join("");
+    $("#dPrice").textContent=priceText(f);
+    const d=$("#dlg"); if(!d.open){ try{d.showModal();}catch(e){d.setAttribute("open","");} }
+    d.scrollTop=0;
+  }
+
+  document.addEventListener("click",e=>{
+    const sb=e.target.closest("[data-say]"); if(sb){const f=byId[sb.dataset.say]; if(f) speak(f.say||f.zh,sb); return;}
+    const sp=e.target.closest("[data-sayp]"); if(sp){const p=PHRASES[+sp.dataset.sayp]; if(p) speak(p.say||p.zh,sp); return;}
+    const c=e.target.closest("[data-open]"); if(c){open(c.dataset.open);return;}
+    const l=e.target.closest("[data-l]"); if(l){lang=l.dataset.l; try{localStorage.setItem("eat-tw-lang",lang);}catch(_){} renderStatic(); if($("#dlg").open&&current) open(current.id); return;}
+    const ch=e.target.closest("[data-cat]"); if(ch){cat=ch.dataset.cat; renderFilters(); renderGrid(); return;}
+  });
+  $("#x").addEventListener("click",()=>$("#dlg").close());
+  $("#dlg").addEventListener("close",()=>{try{synth&&synth.cancel();}catch(_){}});
+  $("#dlg").addEventListener("click",e=>{
+    const d=e.currentTarget, r=d.getBoundingClientRect();
+    if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom) d.close();
+  });
+  if(canSpeak){try{synth.getVoices(); synth.addEventListener&&synth.addEventListener("voiceschanged",()=>{});}catch(_){}}
+
+  renderStatic();
+  const m=/^#f(\d\d)$/.exec(location.hash||""); if(m&&byId[m[1]]) open(m[1]);
+})();
+</script>
+
+</body>
+</html>
